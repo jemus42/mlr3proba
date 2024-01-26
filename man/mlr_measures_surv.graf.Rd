@@ -11,11 +11,11 @@ Calculates the Integrated Graf Score, aka integrated Brier score or squared loss
 
 For an individual who dies at time \eqn{t}, with predicted Survival function, \eqn{S}, the
 Graf Score at time \eqn{t^*}{t*} is given by
-\deqn{L(S,t|t^*) = [(S(t^*)^2)I(t \le t^*, \delta = 1)(1/G(t))] + [((1 - S(t^*))^2)I(t > t^*)(1/G(t^*))]}{L(S,t|t*) = [(S(t*)^2)I(t \le t*, \delta = 1)(1/G(t))] + [((1 - S(t*))^2)I(t > t*)(1/G(t*))]} # nolint
+\deqn{L(S,t|t^*) = [(S(t^*)^2)I(t \le t^*, \delta = 1)(1/G(t))] + [((1 - S(t^*))^2)I(t > t^*)(1/G(t^*))]}{L(S,t|t*) = [(S(t*)^2)I(t \le t*, \delta = 1)(1/G(t))] + [((1 - S(t*))^2)I(t > t*)(1/G(t*))]}
 where \eqn{G} is the Kaplan-Meier estimate of the censoring distribution.
 
 The re-weighted IGS, IGS* is given by
-\deqn{L(S,t|t^*) = [(S(t^*)^2)I(t \le t^*, \delta = 1)(1/G(t))] + [((1 - S(t^*))^2)I(t > t^*)(1/G(t))]}{L(S,t|t*) = [(S(t*)^2)I(t \le t*, \delta = 1)(1/G(t))] + [((1 - S(t*))^2)I(t > t*)(1/G(t))]} # nolint
+\deqn{L(S,t|t^*) = [(S(t^*)^2)I(t \le t^*, \delta = 1)(1/G(t))] + [((1 - S(t^*))^2)I(t > t^*)(1/G(t))]}{L(S,t|t*) = [(S(t*)^2)I(t \le t*, \delta = 1)(1/G(t))] + [((1 - S(t*))^2)I(t > t*)(1/G(t))]}
 where \eqn{G} is the Kaplan-Meier estimate of the censoring distribution, i.e. always
 weighted by \eqn{G(t)}. IGS* is strictly proper when the censoring distribution is independent
 of the survival distribution and when G is fit on a sufficiently large dataset. IGS is never
